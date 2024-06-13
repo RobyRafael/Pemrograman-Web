@@ -1,0 +1,187 @@
+/* dark-theme.css */
+.dark-theme {
+    background-color: #212529;
+    color: #fff;
+}
+
+.dark-theme .table {
+    background-color: #495057;
+    color: #fff;
+}
+
+.dark-theme .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+}
+
+.dark-theme .btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: #fff;
+}
+
+.dark-theme .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: #fff;
+}
+
+/* sidebar.css */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: width 0.3s ease;
+    overflow-y: auto;
+    z-index: 1;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.sidebar-header h1 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.toggle-btn {
+    background-color: #343a40;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: right 0.3s ease;
+}
+
+.toggle-btn::before {
+    content: "\2630"; /* Ikon baris tiga */
+    font-size: 24px;
+}
+
+.toggle-btn.collapsed::before {
+    content: "\2715"; /* Ikon silang */
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu li {
+    margin-bottom: 10px;
+}
+
+.sidebar-menu a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+
+.sidebar.collapsed {
+    width: 60px;
+}
+
+.sidebar.collapsed .sidebar-header h1,
+.sidebar.collapsed .sidebar-content {
+    display: none;
+}
+
+.sidebar.collapsed .toggle-btn {
+    right: 0;
+}
+
+.content {
+    margin: 70px auto 50px 350px; /* Membuat konten terpusat secara horizontal */
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+    border: 1px solid #495057;
+    border-radius: 5px;
+    width: 60vw; /* Lebar konten menjadi 60% dari luas layar */
+    transition: margin-left 0.3s ease;
+}
+
+.sidebar.collapsed ~ .content {
+    margin: 100px auto 50px; /* Membuat konten terpusat secara horizontal */
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 60px;
+    }
+
+    .sidebar .sidebar-header h3,
+    .sidebar .sidebar-content {
+        display: none;
+    }
+
+    .sidebar .toggle-btn {
+        right: 0;
+    }
+
+    .content {
+        width: 90vw; /* Lebar konten menjadi 90% dari luas layar pada layar kecil */
+    }
+}
+
+.btn-primary {
+    float: right;
+    margin-bottom: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* dashboardstyles.css */
+.form-control {
+    background-color: #495057;
+    color: #fff;
+    border: none;
+}
+
+.form-control:focus {
+    background-color: #343a40;
+    color: #fff;
+    outline: none;
+    box-shadow: none;
+}
+
+.form-select {
+    background-color: #495057;
+    color: #fff;
+    border: none;
+}
+
+.form-select:focus {
+    background-color: #343a40;
+    color: #fff;
+    outline: none;
+    box-shadow: none;
+}
